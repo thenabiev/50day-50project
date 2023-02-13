@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bg.css">
+    <title>Abstract background generator</title>
+</head>
+<body onclick="generate()">
+    <div class="container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const container=document.querySelector('.container');
+
+        for(var i=10;i<=70;i++){
+            const circles=document.createElement('div');
+            circles.classList.add('circle');
+            container.append(circles);
+        }
+        function generate(){
+            anime({
+                targets: '.circle',
+                translateX: function(){
+                    return anime.random(-700,700)
+                },
+                translateY: function(){
+                    return anime.random(-700,700)
+                },
+                scale:function(){
+                    return anime.random(1,5)
+                }
+
+            })
+        }
+        generate();
+    </script>
+</body>
+</html>
