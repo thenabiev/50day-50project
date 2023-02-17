@@ -1,0 +1,93 @@
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+::selection{
+    color: #fff;
+    background-color: rgb(255, 115, 0);
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(1, 1, 49);
+    overflow: hidden;
+}
+body::after{
+    content: '';
+    background: linear-gradient(to right bottom, rgb(255, 115, 0), rgb(255, 196, 0));
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    z-index: 0;
+    clip-path: polygon(22% 6%, 64% 16%, 100% 20%, 92% 66%, 76% 93%, 22% 97%, 14% 69%, 0 37%);
+    left: 50%;
+    top: 40%;
+
+}
+.container{
+    backdrop-filter: blur(15px);
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    padding:2.4rem 2rem ;
+    box-shadow: 10px 10px 30px rgba(0,0,0, .3);
+    filter: brightness(.9);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 5px;
+}
+.container .password{
+    min-width: 350px;
+    background-color: rgba(255,255,255, .4);
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: .5rem 1rem;
+    color: #fff;
+    box-shadow: 10px 10px 30px rgba(0,0,0, .3);
+
+}
+.password::placeholder{
+    color: #fff;
+}
+.password:focus{
+    border: 2px solid rgb(255, 196, 0);
+}
+h3, h5{
+    color: #fff;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 400;
+
+}
+h3{
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+h5{
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.check{
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: .5rem 1rem;
+    color: #444;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: fit-content;
+    align-self: center;
+    background-color: rgba(255,255,255, .4);
+    box-shadow: 10px 10px 30px rgba(0,0,0, .4);
+    transition: .3s;
+}
+.check:hover{
+    background-color: rgba(255,255,255, .7);
+}
