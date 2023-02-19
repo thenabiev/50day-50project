@@ -1,0 +1,58 @@
+body{
+    background-color: #111;
+    display: grid;
+    place-items: center;
+}
+.container{
+    max-width: 110rem;
+    padding: 1.5rem;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1.5rem;
+}
+.card{
+    background: #262525;
+    color: #fff;
+    padding: 1.5rem;
+    overflow: hidden;
+    border-radius: .8rem;
+    /* max-height: 50vh; */
+}
+.card-title-large{
+    font-family: fantasy, sans-serif;
+    font-size: 10rem;
+    letter-spacing: .5rem;
+    color: #1d1d1d;
+    transform: translateX(7rem);
+    transition: transform 2.5s;
+}
+.card-title-small{
+    margin-bottom: 1rem;
+    font-family: fantasy, sans-serif;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.card:hover .card-title-large{
+    transform: translateX(-115%);
+    color: #fff;
+}
+.card.twitter:hover{
+    background-color: #1da1f2;
+}
+.card.instagram:hover{
+    background: radial-gradient(
+        at 20% 128%,
+        #feda78,
+        #e23467,
+        #ac2bb3
+    );
+}
+.card.facebook:hover{
+    background: #4267b2;
+}
+.card.youtube:hover{
+    background: #ff074f;
+}
