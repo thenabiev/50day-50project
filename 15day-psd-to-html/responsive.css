@@ -1,0 +1,132 @@
+@media screen and (max-width:992px){
+  
+    .header{
+        padding: 0 2rem;
+     }
+    .header nav{
+        
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 1rem;
+        padding: 0 1rem;
+        background-color: #fff;
+        height: 2rem;
+        
+       
+        
+        
+     }
+    .toggler{
+        display: block;
+        cursor: pointer;
+     } 
+     .nav-list{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        
+        flex-basis: 100%;
+        transition: .4s linear;
+        opacity: 0;
+        transform: translateX(-200%);
+        background-color: #fff;
+        padding: 5rem 0;
+        height: 100vh;
+        
+        z-index: 3;
+     }
+     .nav-list.active{
+        opacity: 1;
+        transform: translateX(0);
+     }
+     .nav-list ul{
+        text-align: center;
+     }
+     .nav-list ul li{
+        display:block;
+ 
+     }
+     .nav-list ul li a{
+        position: relative;
+        transition: .4s;
+     }
+     .nav-list ul li a:hover::after{
+        width: 100%;
+     }
+     /*Header-row*/
+
+     .header-row ,
+     .detail-row{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        margin: 2rem 0;
+        height: auto;
+     }
+    
+     .header-row .col-2 ,
+     .detail-row .col-2{
+        flex-basis: 80%;
+        margin: 2rem;
+        
+     }
+     .detail-row:last-child .col-2:last-child{
+        order: 1;
+     }
+     .detail-row:last-child .col-2:first-child{
+        order: 2;
+     }
+  
+
+     /*Services*/
+     .service,
+     .testimonials{
+        width: 100%;
+        margin: 5rem 0;
+        height: auto;
+     }
+     .serv-header{
+
+        margin: 4rem 0;
+     }
+     .serv-header small{
+        letter-spacing: 2px;
+        color: goldenrod;
+        line-height: 28px;
+     }
+   
+     .serv-row,
+     .test-row{
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 2rem;
+        height: 100%;
+        
+     }
+     .serv-row .card,
+     .test-row .card{
+        padding: 2rem;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #ccc;
+        
+     }
+     .slider{
+        display: none;
+     }
+
+
+     /*Subscribe*/
+     .subscribe{
+        padding: 0 2rem;
+     }
+     
+
+     /*Footer*/
+    footer{
+      padding: 10rem 2rem 3rem;
+      
+    }
+}
