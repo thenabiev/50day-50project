@@ -3,8 +3,14 @@ const hamburger=document.querySelector(".hamburger");
 hamburger.addEventListener('click', ()=>{
     hamburger.classList.toggle('active');
     document.querySelector('.nav-ul').classList.toggle('active')
-    
+    if(hamburger.classList.contains('active')){
+        document.body.style.position='fixed'
+    }else{
+        document.body.style.position='static'
+    }
 })
+
+
 
 document.querySelectorAll('.nav-a')
 .forEach(x=>x.addEventListener('click',()=>{

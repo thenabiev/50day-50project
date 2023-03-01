@@ -7,12 +7,14 @@ body{
     background-color: #01073d;
     color: #fff;
     font-family:"Outfit", sans-serif ;
+    overflow-x: hidden;
 }
 li{
     list-style: none;
 }
 img{
     max-width: 100%;
+    user-select: none;
 }
 a{
     text-decoration: none;
@@ -31,7 +33,7 @@ a{
     letter-spacing: 3px;
     text-transform: uppercase;
 }
-.normalizer{
+.normalizer > *+*{
     margin-top: 1.25rem;
 }
 /* REUSABLES */
@@ -41,6 +43,9 @@ a{
     padding: 1em 1.5em;
     border-radius: 100px;
 }
+.btn:hover{
+    background-color: #7f7fd69c;
+}
 .ghost{
     background: none;
     border: 2px solid #9ad506;
@@ -48,11 +53,20 @@ a{
     border-radius: 100px;
     color: #fff;
 }
+.ghost:hover{
+    background-color: #9ad506;
+}
 .container{
     max-width: 70em;
     width: 90%;
     margin: 0 auto;
     pad: 2em 0;
+}
+.nav-container{
+    max-width: 80em;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2em 0;
 }
 /* /REUSABLES */
 
@@ -167,7 +181,8 @@ header{
 .marque {
     width: var(--marque-width);
     height: var(--marque-height);
-    background-color: #24225A;
+    background-color: #24225a30;
+    backdrop-filter: blur(12px);
     overflow: hidden;
     position: relative;
     user-select: none;
@@ -209,16 +224,137 @@ header{
 /* ############################################ */
 
 /* BUY */
-.buy{
+.buy, .buy-2{
     text-align: center;
+}
+.buy p,
+.buy-2 p{
+    margin-bottom: 3em;
 }
 /* /BUY */
 
 /* ############################################ */
 
+/* BUY 2 */
+.buy-2 img{
+    margin-top: 1.5em;
+    
+}
+/* /BUY 2 */
+
+/* ############################################ */
+/* REVIEWS */
+.reviews{
+    text-align: center;
+}
+.review-title{
+    color: #aad909;
+}
+.grid-item{
+    background-color: #24225a;
+    padding: 4em 2em;
+    position: relative;
+    margin-bottom: 8em;
+}
+.grid-img{
+    position: absolute;
+    top: -5.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+    mix-blend-mode: luminosity;
+}
+.reviews h1{
+    margin-bottom: 2.5em;
+}
+/* /REVIEWS */
+/* ############################################ */
+/* EVENTS */
+.event{
+    text-align: center;
+}
+.event-wrap{
+    background: linear-gradient(120deg, #7f7fd6, #9ad506);
+    padding: 3em;
+    border-radius: 37px;
+}
+.event .btn{
+    background-color: #111;
+    font-size: 1rem;
+}
+.event .btn:hover{
+    background-color: #cc8c2d;
+}
+.event h1{
+    margin-bottom: 1em;
+}
+/* /EVENTS */
+/* ############################################ */
+/* FOOTER */
+.footer{
+    margin-top: 5em;
+}
+.footer-col ul li{
+    margin-bottom: 1em;
+}
+.footer-a{
+    color: #fff;
+    font-weight: 200;
+}
+.footer-col h4{
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.icons ul{
+    display: flex;
+    gap: 1em;
+}
+.icons li{
+    margin-bottom: 1em;
+
+}
+.icons a{
+    color: #fff;
+
+}
+.footer-input{
+    background-color: #24225a;
+    padding: 1em 6em 1em 1.5em;
+    border-radius: 100px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    color: #fff;
+}
+.news-wrap{
+    position: relative;
+}
+.footer-btn{
+    position: absolute;
+    left: 15rem;
+    top: 0;
+}
+.footer .btn:hover{
+    background-color: #cc8c2d;
+}
+.newsletter h4{
+    margin: 1em 0;
+    font-size: 1.25em;
+}
+.page-end{
+    margin-top: 1em;
+    background: linear-gradient(to right, #9ad4d6, #91d2d2);
+    width: 100%;
+    height: 1vh;
+}
+/* /FOOTER */
+/* ############################################ */
 
 
-/* Events */
+
+/* ACTIONS */
 .hamburger *{
     transition: .4s;
 }
@@ -236,6 +372,62 @@ header{
 
 
 /* MEDIA QUERY */
+@media(min-width:800px){
+    .split{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hamburger{
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-ul{
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
+        opacity: 1;
+        height: 100%;
+        justify-content: flex-end;
+    }
+    .nav-li{
+        font-size: 1.5em;
+    }
+    .nav-a{
+        position: relative;
+    }
+    .nav-a::before{
+        content: '';
+        width: 0;
+        position: absolute;
+        height: 3px;
+        background-color: #cc8c2d;
+        bottom: -4px;
+        transition: .3s;
+    }
+    .nav-a:hover::before{
+        width: 100%;
+    }
+    .hero{
+        text-align: left;
+    }
+    .hero-left{
+        width: 50%;
+    }
+    .h1{
+        font-size: 4.25rem;
+        line-height: 1;
+    }
+}
+
+
+
+
+
 @media(max-width:420px){
     .btn-wrap{
         display: flex;
