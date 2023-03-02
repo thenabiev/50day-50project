@@ -7,6 +7,8 @@
     <title>Animate On Scroll</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css" integrity="sha512-cHxvm20nkjOUySu7jdwiUxgGy11vuVPE9YeK89geLMLMMEOcKFyS2i+8wo0FOwyQO/bL8Bvq1KMsqK4bbOsPnA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/eaacae3352.js" crossorigin="anonymous"></script>
     <script src="app.js" defer></script>
 </head>
 <body>
@@ -17,18 +19,18 @@
                 <div class="logo-wrap">
                     <a href="#" class="logo">CR7PTO</a>
                 </div>
-                <ul class="nav-ul">
+                <ul class="nav-ul slide-left">
                     <li class="nav-li">
-                        <a href="#" class="nav-a">about</a>
+                        <a href="#about" class="nav-a">about</a>
                     </li>
                     <li class="nav-li">
-                        <a href="#" class="nav-a">pricing</a>
+                        <a href="#pricing" class="nav-a">pricing</a>
                     </li>
                     <li class="nav-li">
-                        <a href="#" class="nav-a">buy nfts</a>
+                        <a href="#buy" class="nav-a">buy nfts</a>
                     </li>
                     <li class="nav-li">
-                        <a href="#" class="nav-a">contact</a>
+                        <a href="#contact" class="nav-a">contact</a>
                     </li>
                 </ul>
                 <div class="hamburger">
@@ -47,7 +49,7 @@
         <img class="circle-2" src="images/Ellipse 2.png" alt="">
         <div class="container">
             <div class="split">
-                <div class="hero-left">
+                <div class="hero-left slide-right">
                     <h1 class="h1">discover and collect nfts</h1>
                     <p class="body">The most secure marketplace for buying and selling unique crypto assets.</p>
                     <div class="btn-wrap">
@@ -56,7 +58,7 @@
                     </div>
                 </div>
                 <div class="hero-right">
-                    <img src="images/hero comp.png" alt="">
+                    <img src="images/hero comp.png" class="enlarge" alt="">
                 </div>
             </div>
         </div>
@@ -64,12 +66,12 @@
     <!-- /HERO -->
     <br>
     <!-- COMPANY -->
-    <section class="company">
-        <div class="container">
+    <section id="about" class="company hiddenblr">
+        <div class="container ">
             <h2 class="subheading">featured one</h2>
             <br>
         </div>
-            <div class="marque">
+            <div class="marque" id="marque-ani">
                 <div class="marque-content">
                     <li></li>
                     <li>
@@ -89,7 +91,7 @@
                     </li>
                 </div>
             </div>
-            <div class="marque-fixed">
+            <div class="marque-fixed" id="marque-fixed">
                 <div class="marque-list">
                     <img src="images/tech.svg" alt="">
                     <img src="images/big shadow.svg" alt="">
@@ -101,13 +103,13 @@
     <!-- /COMPANY -->
 
     <!-- BUY -->
-    <section class="buy">
+    <section class="buy ">
         <div class="container">
             <div class="split">
-                <div class="buy-left">
+                <div class="buy-left enlarge">
                     <img src="images/layout.svg" alt="">
                 </div>
-                <div class="buy-right normalizer">
+                <div class="buy-right normalizer slide-left">
                     <h2 class="subheading">analytics</h2>
                     <h1 class="h1">Built-in analytics to track your NFTs</h1>
                     <p class="body">Use our built-in analytics dashboard to pull valuable insgihts and monitor the value of your Cr7pto portfolio over time.</p>
@@ -119,17 +121,17 @@
     <!-- /BUY -->
     <br>
     <!-- BUY 2 -->
-    <section class="buy-2">
+    <section class="buy-2 " id="buy" >
         <div class="container">
             <div class="split">
-                <div class="two-left">
+                <div class="two-left slide-right">
                     <h2 class="subheading">24/7 access</h2>
                     <h1 class="h1">sell your NFTs from anywhere at any time</h1>
                     <p class="body">With our easy-to-use platform, you can buy or sell assets from anywhere in the world, at any time.</p>
                     <a href="#" class="btn subheading">get started</a>
                 </div>
                 <div class="two-right">
-                    <img src="images/phone.svg" alt="">
+                    <img src="images/phone.svg" class="enlarge" alt="">
                 </div>
             </div>
         </div>
@@ -137,10 +139,10 @@
     <!-- /BUY 2 -->
     <!-- REVIEWS -->
     <section class="reviews">
-        <div class="container normalizer">
-            <h2 class="review-title subheading">Reviews</h2>
-        <h1 class="h1">read what others have to say</h1>
-        <div class="grid-parent">
+        <div class="container normalizer ">
+            <h2 class="review-title subheading enlarge">Reviews</h2>
+        <h1 class="h1 slide-left">read what others have to say</h1>
+        <div class="grid-parent ">
             <div class="grid-item normalizer">
                 <img class="grid-img" src="images/walter white.svg" alt="">
                 <h2 class="subheading">walter white</h2>
@@ -162,9 +164,9 @@
     </section>
     <!-- /REVIEWS -->
     <!-- EVENT -->
-    <section class="event">
+    <section class="event" id="pricing">
         <div class="container">
-            <div class="event-wrap normalizer">
+            <div class="event-wrap normalizer slide-right">
                 <h2 class="subheading">are you ready?</h2>
                 <h1 class="h1">be a part of the next big thing</h1>
                 <a href="#" class="btn subheading ">view our pricing</a>
@@ -173,7 +175,7 @@
     </section>
     <!-- EVENT -->
     <!-- FOOTER -->
-    <section class="footer">
+    <section class="footer" id="contact">
         <div class="container">
             <a href="#" class="logo">CR7PTO</a>
             <div class="row">
@@ -213,16 +215,18 @@
                     <h4>Contact</h4>
                     <ul>
                         <li class="footer-li">
-                            <a href="#" class="footer-li">Fb</a>
+                            <a href="#" class="footer-li">
+                                <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                            </a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li">Tw</a>
+                            <a href="#" class="footer-li"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li">Ig</a>
+                            <a href="#" class="footer-li"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         </li>
                         <li class="footer-li">
-                            <a href="#" class="footer-li">Yt</a>
+                            <a href="#" class="footer-li"><i class="fa fa-youtube" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>
