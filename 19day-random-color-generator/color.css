@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+h1{
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 13px;
+    padding: 0 0 3rem;
+}
+.color-container{
+    background-color: lime;
+    width: 300px;
+    height: 150px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 23px;
+    box-shadow: 8px 8px 32px rgba(0,0,0, .25);
+    text-shadow: 2px 2px 8px  rgba(0,0,0, .5);;
+}
