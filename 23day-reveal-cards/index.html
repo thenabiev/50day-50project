@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Animated Card Reveal</h1>
+    <div class="container">
+        <div class="card">
+            <h3>Card1</h3>
+        </div>
+        <div class="card">
+            <h3>Card2</h3>
+        </div>
+        <div class="card">
+            <h3>Card3</h3>
+        </div>
+        <div class="card">
+            <h3>Card4</h3>
+        </div>
+        <div class="card">
+            <h3>Card5</h3>
+        </div>
+        <div class="card">
+            <h3>Card6</h3>
+        </div>
+        <div class="card">
+            <h3>Card7</h3>
+        </div>
+        <div class="card">
+            <h3>Card8</h3>
+        </div>
+        <div class="card">
+            <h3>Card9</h3>
+        </div>
+        <div class="card">
+            <h3>Card10</h3>
+        </div>
+        <div class="card">
+            <h3>Card11</h3>
+        </div>
+        <div class="card">
+            <h3>Card12</h3>
+        </div>
+    </div>
+    <script>
+        const card=document.querySelectorAll('.card')
+        function loadItems(){
+                let counter=0
+                setInterval(()=>{
+                   card[counter].classList.add('show');
+                   return counter+=1
+                }, 200)
+            }
+        
+        window.addEventListener('load', loadItems)
+    </script>
+</body>
+</html>
