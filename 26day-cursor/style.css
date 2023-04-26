@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #0f0f0f;
+    overflow: hidden;
+}
+
+span{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    pointer-events: none;
+    background-color: rgb(251, 251, 163);
+    z-index: -1;
+    border-radius: 50%;
+    /* left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    /* animation: anime 7s linear forwards; */
+    mix-blend-mode: lighten;
+    
+}
+p{
+    width: 900px;
+   
+}
+
+p, h1{
+    text-align: center;
+    margin: auto;
+}
+/* @keyframes anime{
+    0%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+    50%{
+        opacity: .3;
+    }
+    100%{
+        transform: translate(-50%, -3000%);
+        opacity: 0;
+        filter: hue-rotate(1200deg);
+
+    }
+
+
+} */
